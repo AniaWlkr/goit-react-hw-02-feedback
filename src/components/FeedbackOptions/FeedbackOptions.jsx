@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 import styles from './FeedbackOptions.module.css';
 
@@ -11,6 +12,11 @@ const FeedbackOptions = ({ feedbackBtns, onButtonClick }) => {
       ))}
     </div>
   );
+};
+
+FeedbackOptions.propTypes = {
+  feedbackBtns: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onButtonClick: PropTypes.func,
 };
 
 export default FeedbackOptions;

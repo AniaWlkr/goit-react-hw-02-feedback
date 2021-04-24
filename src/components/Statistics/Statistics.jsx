@@ -1,5 +1,6 @@
 import styles from './Statistics.module.css';
 import Notification from '../Notification/Notification';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ good, neutral, bad, total, positives }) => {
   return (
@@ -18,6 +19,14 @@ const Statistics = ({ good, neutral, bad, total, positives }) => {
       )}
     </div>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positives: PropTypes.number,
 };
 
 export default Statistics;
